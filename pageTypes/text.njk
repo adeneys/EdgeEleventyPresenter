@@ -1,0 +1,11 @@
+---
+pagination:
+    data: collections.textPages
+    size: 1
+    alias: contentPage
+permalink: "{{ contentPage.name | slugify }}/"
+---
+<p>Text page</p>
+
+id: {{ contentPage.id }}
+name: {{ contentPage.name }}

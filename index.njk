@@ -1,0 +1,9 @@
+---
+layout: "layouts/main.njk"
+title: "Welcome"
+---
+Welcome
+
+{% set titlePage = collections.titlePages[0] %}
+
+<a href="{{ titlePage.name | slugify }}/">{{ titlePage.name }}</a>

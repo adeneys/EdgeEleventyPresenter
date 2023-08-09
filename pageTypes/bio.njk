@@ -1,7 +1,11 @@
 ---
 pagination:
-    data: edgeContent
+    data: collections.bioPages
     size: 1
     alias: contentPage
 permalink: "{{ contentPage.name | slugify }}/"
 ---
+<p>Bio page</p>
+
+id: {{ contentPage.id }}
+name: {{ contentPage.name }}

@@ -6,6 +6,18 @@
     <title>{{ title }}</title>
   </head>
   <body>
+    <nav aria-labelledby="pages-navigation">
+      <h2 id="pages-navigation">Pages</h2>
+      <ul>
+      {% for contentPage in edgeContent %}
+        <li>
+          <a href="{{contentPage.name | slugify}}/" {% if contentPage.id == id %} aria-current="page" {% endif %}>
+            {{ contentPage.name }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </nav>
     {{ content | safe }}
   </body>
 </html>
