@@ -11,8 +11,8 @@
       <ul>
       {% for contentPage in edgeContent %}
         <li>
-          <a href="{{contentPage.name | slugify}}/" {% if contentPage.id == id %} aria-current="page" {% endif %}>
-            {{ contentPage.name }}
+          <a href="{{ contentPage.url }}" {% if contentPage.id == id %} aria-current="page" {% endif %}>
+            {{ contentPage.title }}
           </a>
         </li>
       {% endfor %}

@@ -1,5 +1,14 @@
 const edgeContentSource = require("../lib/edgeContentSource");
 
 module.exports = async function(globalData) {
-    return await edgeContentSource.fetchContent(globalData.edgeUri, process.env.EDGE_TOKEN);
+    const pages = await edgeContentSource.fetchContent(globalData.edgeUri, process.env.EDGE_TOKEN);
+
+    for(let i in pages) {
+        pages[i].url = i + "-" + pages[i].name.toLowerCase()
+            .replace(/[^a-z0-9 -]/g, "")
+            .replace(/\s+/g, "-")
+            + "/";
+    }
+
+    return pages;
 }

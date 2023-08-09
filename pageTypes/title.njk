@@ -3,9 +3,18 @@ pagination:
     data: collections.titlePages
     size: 1
     alias: contentPage
-permalink: "{{ contentPage.name | slugify }}/"
+permalink: "{{ contentPage.url }}"
 ---
-<p>Title page</p>
 
-id: {{ contentPage.id }}
-name: {{ contentPage.name }}
+
+
+<section class="text-mid">
+
+
+title: {{ contentPage.title }}
+url: {{ contentPage.url }}
+author: {{ contentPage.author }}
+date: {{ contentPage.date }}
+hashtags: {{ contentPage.hashtags }}
+
+</section>
