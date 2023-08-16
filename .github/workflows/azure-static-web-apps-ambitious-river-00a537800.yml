@@ -32,6 +32,8 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/"
           output_location: "/_site"
+        env:
+          EDGE_TOKEN: ${{ secrets.EDGE_TOKEN }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
