@@ -48,6 +48,10 @@ module.exports = function(eleventyConfig) {
 
     // Filters
     eleventyConfig.addFilter("proseConvert", function(value) {
+        if(!value) {
+            return "";
+        }
+
         const renderer = new Renderer();
         return renderer.render(value);
     });

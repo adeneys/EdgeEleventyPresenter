@@ -18,7 +18,7 @@ permalink: "{{ contentPage.url }}"
     {% set width = (99 / contentPage.images.results.length) %}
     {% for image in contentPage.images.results %}
         <div class="image-holder">
-            <img src="{{ image.fileUrl }}" /><!-- width="{{width}}%" -->
+            <img src="{{ image.fileUrl }}" />
         </div>
     {% endfor %}
 </div>
