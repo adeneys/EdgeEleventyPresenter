@@ -5,7 +5,11 @@ pagination:
     alias: contentPage
 permalink: "{{ contentPage.url }}"
 ---
-<p>Section Title page</p>
+<div class="bg-image">
+    <img src="{{ contentPage.backgroundImage.results[0].fileUrl }}" />
+</div>
 
-id: {{ contentPage.id }}
-name: {{ contentPage.name }}
+<section class="text-vert-mid{% if contentPage.layout.results[0].id == "taxonomy_layout_right" %} right{% endif %}">
+    <div class="title-title"><p>{{ contentPage.title }}</p></div>
+    <div class="title-title"><p>{{ contentPage.subtitle }}</p></div>
+</section>

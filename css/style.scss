@@ -1,0 +1,136 @@
+$color-primary: #426bb1;
+$color-text: #333333;
+$color-text-hover: #ffffff;
+
+body {
+    padding: 2em;
+    font-family: Tahoma, sans-serif;
+    font-size: 1em;
+    color: $color-text;
+}
+
+.content-holder {
+    width: 1200px;
+}
+
+nav {
+    float: right;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        color: $color-text;
+        padding: 0.5em;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-text-hover;
+        }
+    }
+
+    [aria-current="page"] {
+        background-color: lighten($color-primary, 30%);
+    }
+}
+
+.bg-image {
+    position: absolute;
+    z-index: -1;
+}
+
+.text-vert-mid {
+    font-size: 2em;
+    padding: 1em 0;
+
+    p {
+        margin: 0.2em;
+    }
+}
+
+.title-title {
+    color: $color-text-hover;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+.title-detail {
+    color: $color-text-hover;
+    padding: 0.5em;
+}
+
+.hashtag {
+    margin-right: 0.5em;
+}
+
+.bio-image {
+    float: left;
+    margin: 2em 2em 0 0;
+}
+
+.bio-author {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.bio-highlights {
+    font-size: 1.2em;
+}
+
+.header {
+    height: 100px;
+}
+
+.page-title {
+    height: 100%;
+    vertical-align: middle;
+    color: $color-text-hover;
+    font-size: 2em;
+    padding: 1em 0.5em;
+}
+
+.right {
+    float: right;
+    margin-right: 3em;
+    text-align: right;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+
+    img {
+        width: 100%;
+    }
+}
+
+/*.image-holder {
+    
+
+    
+}*/
+
+.text-social {
+    position: relative;
+    top: 420px;
+    color: $color-text-hover;
+    font-size: 1.5em;
+    margin-left: 220px;
+
+    label {
+        margin: 0 40px;
+    }
+}

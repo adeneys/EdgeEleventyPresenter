@@ -5,7 +5,17 @@ pagination:
     alias: contentPage
 permalink: "{{ contentPage.url }}"
 ---
-<p>Bio page</p>
+<div class="header">
+    <img src="{{ contentPage.headerImage.results[0].fileUrl }}" />
+</div>
 
-id: {{ contentPage.id }}
-name: {{ contentPage.name }}
+<section class="bio-image">
+    <img src="{{ contentPage.profileImage.results[0].fileUrl }}" width="500px" />
+</section>
+
+<section class="text-vert-mid">
+    <p><label class="bio-author">{{ contentPage.author }}</label></p>
+    <p>{{ contentPage.jobTitle }}</p>
+    <div class="bio-highlights">{{ contentPage.highlights | proseConvert | safe }}</div>
+    <p><label class="bio-mastodon">{{ contentPage.mastodon }}</label></p>
+</section>

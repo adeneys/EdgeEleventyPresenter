@@ -5,16 +5,19 @@ pagination:
     alias: contentPage
 permalink: "{{ contentPage.url }}"
 ---
+<div class="bg-image">
+    <img src="{{ contentPage.backgroundImage.results[0].fileUrl }}" />
+</div>
 
-
-
-<section class="text-mid">
-
-
-title: {{ contentPage.title }}
-url: {{ contentPage.url }}
-author: {{ contentPage.author }}
-date: {{ contentPage.date }}
-hashtags: {{ contentPage.hashtags }}
-
+<section class="text-vert-mid">
+    <div class="title-title"><p>{{ contentPage.title }}</p></div>
+    <div class="title-detail"><p>{{ contentPage.author }}</p></div>
+    <div class="title-detail"><p>{{ contentPage.date | formatDate }}</p></div>
+    <div class="title-detail">
+        <p>
+            {% for tag in contentPage.hashtags.split(",") %}
+                <label class="hashtag">#{{ tag }}</label>
+            {% endfor %}
+        </p>
+    </div>
 </section>

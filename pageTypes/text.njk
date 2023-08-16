@@ -5,7 +5,20 @@ pagination:
     alias: contentPage
 permalink: "{{ contentPage.url }}"
 ---
-<p>Text page</p>
+<div class="header">
+    <img class="bg-image" src="{{ contentPage.headerImage.results[0].fileUrl }}" />
+    <div class="page-title">{{ contentPage.title }}</div>
+</div>
 
-id: {{ contentPage.id }}
-name: {{ contentPage.name }}
+<section class="text-vert-mid">
+    {{ contentPage.text | proseConvert | safe }}
+</section>
+
+<div class="images">
+    {% set width = (99 / contentPage.images.results.length) %}
+    {% for image in contentPage.images.results %}
+        <div class="image-holder">
+            <img src="{{ image.fileUrl }}" /><!-- width="{{width}}%" -->
+        </div>
+    {% endfor %}
+</div>

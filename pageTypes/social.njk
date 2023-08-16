@@ -1,0 +1,16 @@
+---
+pagination:
+    data: collections.socialPages
+    size: 1
+    alias: contentPage
+permalink: "{{ contentPage.url }}"
+---
+<div class="bg-image">
+    <img src="{{ contentPage.backgroundImage.results[0].fileUrl }}" />
+</div>
+
+<section class="text-social">
+    <label>{{ contentPage.slack }}</label>
+    <label>{{ contentPage.mastodon }}</label>
+    <label>{{ contentPage.stackExchange }}</label>
+</section>
