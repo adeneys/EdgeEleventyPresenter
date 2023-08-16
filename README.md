@@ -6,7 +6,7 @@ An [11ty](https://www.11ty.dev/) website showing presentation content from Sitec
 
 ## Requirements ##
 
-This project requires minimum Node version 14.
+This project requires minimum Node version 18.
 
 ## Steps ##
 
@@ -14,6 +14,6 @@ This project requires minimum Node version 14.
 
     npm install
 
-1. Run 11ty to generate the static site
+1. Run the `build` command to generate the static site
 
-    npx @11ty/eleventy
+    npm run build
