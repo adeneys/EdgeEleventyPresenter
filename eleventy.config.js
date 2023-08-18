@@ -46,6 +46,9 @@ module.exports = function(eleventyConfig) {
         }
     });
 
+    // Asset copy
+    eleventyConfig.addPassthroughCopy("img");
+
     // Filters
     eleventyConfig.addFilter("proseConvert", function(value) {
         if(!value) {
@@ -58,5 +61,13 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addFilter("formatDate", function(value) {
         return new Date(value).toDateString();
+    });
+
+    eleventyConfig.addFilter("mastodonUrl", function(value) {
+        let parts = value.split("@");
+        if(parts.length != 3)
+            return "";
+
+        return `https://${parts[2]}/@${parts[1]}`
     });
 };

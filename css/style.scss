@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $color-primary: #426bb1;
 $color-text: #333333;
 $color-text-hover: #ffffff;
@@ -9,8 +11,8 @@ body {
     color: $color-text;
 }
 
-.content-holder {
-    width: 1200px;
+a {
+    color: $color-primary;
 }
 
 nav {
@@ -38,8 +40,12 @@ nav {
     }
 
     [aria-current="page"] {
-        background-color: lighten($color-primary, 30%);
+        background-color: color.scale($color-primary, $lightness: 70%);
     }
+}
+
+.content-holder {
+    width: 1200px;
 }
 
 .bg-image {
@@ -48,12 +54,17 @@ nav {
 }
 
 .text-vert-mid {
+    display: inline-block;
     font-size: 2em;
     padding: 1em 0;
 
     p {
         margin: 0.2em;
     }
+}
+
+.bio-detail {
+    width: 50%;
 }
 
 .title-title {
@@ -73,7 +84,7 @@ nav {
 }
 
 .bio-image {
-    float: left;
+    display: inline-block;
     margin: 2em 2em 0 0;
 }
 
@@ -83,7 +94,17 @@ nav {
 }
 
 .bio-highlights {
+    p {
+        font-size: 1.2em;
+    }
+}
+
+.bio-mastodon {
     font-size: 1.2em;
+    background: no-repeat left/1.8em url("/img/mastodon_logo.png") ;
+    padding: 0.2em 0 0.2em 2em;
+    text-decoration: none;
+    color: $color-primary;
 }
 
 .header {
@@ -114,14 +135,9 @@ nav {
 
     img {
         width: 100%;
+        max-height: 800px;
     }
 }
-
-/*.image-holder {
-    
-
-    
-}*/
 
 .text-social {
     position: relative;

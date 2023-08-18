@@ -13,9 +13,9 @@ permalink: "{{ contentPage.url }}"
     <img src="{{ contentPage.profileImage.results[0].fileUrl }}" width="500px" />
 </section>
 
-<section class="text-vert-mid">
+<section class="text-vert-mid bio-detail">
     <p><label class="bio-author">{{ contentPage.author }}</label></p>
     <p>{{ contentPage.jobTitle }}</p>
     <div class="bio-highlights">{{ contentPage.highlights | proseConvert | safe }}</div>
-    <p><label class="bio-mastodon">{{ contentPage.mastodon }}</label></p>
+    <p><a href="{{ contentPage.mastodon | mastodonUrl }}" class="bio-mastodon">{{ contentPage.mastodon }}</a></p>
 </section>
