@@ -6,7 +6,8 @@ const Renderer = require('@cristata/prosemirror-to-html-js').Renderer;
 
 module.exports = function(eleventyConfig) {
     // Edge config. X-GQL-Token is read from environment variables.
-    eleventyConfig.addGlobalData("edgeUri", "https://edge.sitecorecloud.io/api/graphql/v1");
+    eleventyConfig.addGlobalData("edgeUri", process.env.EDGE_URI || "https://edge.sitecorecloud.io/api/graphql/v1");
+    eleventyConfig.addGlobalData("edgeToken", process.env.EDGE_TOKEN)
 
     // Page specific collections from Edge
     eleventyConfig.addCollection("titlePages", async collectionApi => {
