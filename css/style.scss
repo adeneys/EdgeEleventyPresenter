@@ -16,7 +16,8 @@ a {
 }
 
 nav {
-    float: right;
+    display: inline-block;
+    vertical-align: top;
 
     ul {
         margin: 0;
@@ -45,7 +46,9 @@ nav {
 }
 
 .content-holder {
-    width: 1200px;
+    width: 1300px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .bg-image {
@@ -121,7 +124,7 @@ nav {
 
 .right {
     float: right;
-    margin-right: 3em;
+    margin-right: 2em;
     text-align: right;
 }
 

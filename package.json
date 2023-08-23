@@ -4,7 +4,8 @@
   "description": "A website build in 11ty to present content from Sitecore Experience Edge and managed in Sitecore Content Hub ONE",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy"
+    "build": "eleventy",
+    "watch": "eleventy --serve"
   },
   "author": "Alistair Deneys",
   "license": "MIT",

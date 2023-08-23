@@ -9,7 +9,7 @@ permalink: "{{ contentPage.url }}"
     <img src="{{ contentPage.backgroundImage.results[0].fileUrl }}" />
 </div>
 
-<section class="text-vert-mid">
+<section class="text-vert-mid" style="height: {{ contentPage.backgroundImage.results[0].fileHeight }}px">
     <div class="title-title"><p>{{ contentPage.title }}</p></div>
     <div class="title-detail"><p>{{ contentPage.author }}</p></div>
     <div class="title-detail"><p>{{ contentPage.date | formatDate }}</p></div>
