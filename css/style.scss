@@ -1,8 +1,23 @@
 @use "sass:color";
 
 $color-primary: #426bb1;
-$color-text: #333333;
+$color-text: #2A2C2C;
 $color-text-hover: #ffffff;
+
+@mixin titlepage-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0.5em;
+    margin: 0 0 0 50px;
+    width: 600px;
+}
+
+@mixin page-title {
+    height: 100%;
+    vertical-align: middle;
+    font-size: 2em;
+    padding: 1em 0.5em;
+}
 
 body {
     padding: 2em;
@@ -54,6 +69,10 @@ nav {
 .bg-image {
     position: absolute;
     z-index: -1;
+
+    img {
+        max-width: 1280px;
+    }
 }
 
 .text-vert-mid {
@@ -71,15 +90,26 @@ nav {
 }
 
 .title-title {
+    color: $color-text;
+    @include titlepage-title;
+    margin: 170px 0 0 50px;
+}
+
+.title-title-light {
     color: $color-text-hover;
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 0.5em;
+    @include titlepage-title;
+    margin: 170px 0 0 50px;
+}
+
+.title-subtitle {
+    color: $color-text-hover;
+    @include titlepage-title;
 }
 
 .title-detail {
-    color: $color-text-hover;
+    color: $color-text;
     padding: 0.5em;
+    margin: 0 0 0 50px;
 }
 
 .hashtag {
@@ -89,6 +119,10 @@ nav {
 .bio-image {
     display: inline-block;
     margin: 2em 2em 0 0;
+
+    img {
+        border-radius: 50%;
+    }
 }
 
 .bio-author {
@@ -112,14 +146,20 @@ nav {
 
 .header {
     height: 100px;
+
+    img {
+        max-width: 1280px;
+    }
 }
 
 .page-title {
-    height: 100%;
-    vertical-align: middle;
+    @include page-title;
+    color: $color-text;
+}
+
+.page-title-light {
+    @include page-title;
     color: $color-text-hover;
-    font-size: 2em;
-    padding: 1em 0.5em;
 }
 
 .right {

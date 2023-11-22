@@ -6,7 +6,8 @@ pagination:
 permalink: "{{ contentPage.url }}"
 ---
 <div class="header">
-    <img src="{{ contentPage.headerImage.results[0].fileUrl }}" />
+    <img class="bg-image" src="{{ contentPage.headerImage.results[0].fileUrl }}" />
+    <div class="page-title">{{ contentPage.title }}</div>
 </div>
 
 <section class="bio-image">
