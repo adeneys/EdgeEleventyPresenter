@@ -10,7 +10,19 @@ permalink: "{{ contentPage.url }}"
 </div>
 
 <section class="text-social">
-    <label>{{ contentPage.slack }}</label>
-    <label>{{ contentPage.mastodon }}</label>
-    <label>{{ contentPage.stackExchange }}</label>
+    <div>
+        <img src="/img/slack_logo.png" />
+        <p class="social-username">{{ contentPage.slack }}</p>
+        <p class="social-detail">sitecorechat.slack.com</p>
+    </div>
+    <div>
+        <img src="/img/mastodon_logo.png" />
+        <p class="social-username">{{ contentPage.mastodon }}</p>
+        <p class="social-detail">mastodon</p>
+    </div>
+    <div>
+        <img src="/img/stack_exchange_logo.png" />
+        <p class="social-username">{{ contentPage.stackExchange }}</p>
+        <p class="social-detail">sitecore.stackexchange.com</p>
+    </div>
 </section>

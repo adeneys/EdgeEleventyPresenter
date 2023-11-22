@@ -183,13 +183,21 @@ nav {
 }
 
 .text-social {
-    position: relative;
-    top: 420px;
-    color: $color-text-hover;
+    color: $color-text;
     font-size: 1.5em;
-    margin-left: 220px;
+    padding: 250px 0;
 
-    label {
-        margin: 0 40px;
+    div {
+        display: inline-block;
+        width: 32.8%;
+        text-align: center;
     }
+
+    img {
+        width: 56px;
+    }
+}
+
+.social-username {
+    font-size: 1.3em;
 }
